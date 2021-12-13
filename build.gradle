@@ -1,0 +1,25 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+compileJava.options.encoding = 'UTF-8'
+
+javafx {
+    version = "16"
+    modules = ['javafx.controls']
+}
+
+mainClassName = 'ca.qc.bdeb.inf203.client.Main'
